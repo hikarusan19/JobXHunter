@@ -1,0 +1,351 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: skyblue;
+    padding: 15px 0; /* Reduce padding to make the header smaller */
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px;
+    background-color: skyblue;
+}
+
+.logo-title {
+    display: flex;
+    align-items: center; /* Align logo and text vertically */
+    gap: 10px; /* Add space between the logo and the text */
+}
+
+.logo img {
+    height: 60px; /* Adjust the size of the logo */
+    width: 60px; /* Ensure the width matches the height for a perfect circle */
+    border-radius: 50%; /* Keep the logo circular */
+    object-fit: cover; /* Ensure the image fits within the circle */
+}
+
+.header-title {
+    flex: 1;
+    text-align: center;
+}
+
+.header-title h1 {
+    font-size: 2.2em; /* Adjust font size for the header title */
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    color: #333;
+    margin: 0;
+}
+
+.nav-links ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links ul li {
+    margin-left: 20px;
+}
+
+.nav-links ul li a {
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    color: #333;
+    font-size: 1.5em;
+    padding: 5px 10px;
+}
+
+.nav-links {
+    margin-left: auto;
+}
+
+main {
+    flex: 1;
+    display: flex;
+}
+
+.content-wrapper {
+    display: flex;
+    flex: 1; /* Make the content-wrapper fill the remaining space */
+    gap: 20px;
+    padding: 20px;
+}
+
+.advertisement {
+    width: 25%; /* Advertisement takes 25% of the width */
+    background-color: #f1f1f1;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+}
+
+.advertisement h3 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.advertisement .ad-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.job-list-container {
+    width: 25%; /* Job list takes 25% of the width */
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align content to the top */
+    max-height: 600px; /* Set a fixed height for the job list container */
+    overflow-y: auto; /* Add vertical scroll bar if content overflows */
+}
+
+.job-list-container h3 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.job-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.job-list li {
+    font-size: 1em;
+    color: #555;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.job-list li:last-child {
+    border-bottom: none;
+}
+
+.main-container {
+    width: 50%; /* Keep the main container width */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align content to the top */
+    align-items: center; /* Center content horizontally */
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 50px; /* Add margin to position it further down */
+}
+
+.main-container h1 {
+    font-size: 2.5em;
+    color: #333;
+}
+
+.main-container p {
+    font-size: 1.2em;
+    color: #555;
+}
+
+.search-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    gap: 15px; /* Increase spacing between inputs and button */
+}
+
+.search-input {
+    padding: 15px; /* Increase padding for larger input fields */
+    font-size: 1.2em; /* Increase font size */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px; /* Increase width of input fields */
+}
+
+.search-button {
+    padding: 15px 30px; /* Increase button size */
+    font-size: 1.2em; /* Increase font size */
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search-button:hover {
+    background-color: darkblue;
+}
+
+footer {
+    background-color:rgb(109, 169, 193);
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.footer-container p {
+    margin: 0;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.modal-content label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+.modal-content input,
+.modal-content textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.modal-content button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.modal-content button:hover {
+    background-color: darkblue;
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-button:hover {
+    color: black;
+}
+
+/* Style the close button */
+.modal-header .close {
+    border-radius: 10%; /* Make it circular */
+    width: 70px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none; /* Remove default border */
+    cursor: pointer;
+    position: relative;
+}
+
+.modal-header .close::before {
+    content: "Back"; /* Add a custom "X" symbol */
+    font-size: 1.5em;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.modal-header .close:hover {
+    background-color: #0056b3 /* Darker red on hover */
+}
+
+/* Custom close button */
+.custom-close-btn {
+    background-color: #ff4d4d; /* Red background */
+    color: white; /* White text */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Slightly rounded corners */
+    padding: 5px 15px; /* Add padding for better spacing */
+    font-size: 1em; /* Adjust font size */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+.custom-close-btn:hover {
+    background-color: #e60000; /* Darker red on hover */
+}
+
+/* Style the Close button with just a line */
+.btn-close-line {
+    background: none; /* Remove background */
+    border: none; /* Remove border */
+    color: #007bff; /* Bootstrap primary blue color */
+    text-decoration: underline; /* Add underline to make it look like a link */
+    font-size: 1em; /* Adjust font size */
+    margin-top: 10px; /* Add spacing above the button */
+    cursor: pointer; /* Pointer cursor on hover */
+    display: block; /* Ensure it takes up its own line */
+    text-align: center; /* Center the button text */
+}
+
+.btn-close-line:hover {
+    color: #0056b3; /* Darker blue on hover */
+    text-decoration: none; /* Remove underline on hover */
+}
+
+/* Style for clickable modal links */
+.modal-link {
+    color: #007bff; /* Bootstrap primary blue color */
+    text-decoration: underline; /* Underline to indicate a link */
+    font-size: 1.2em; /* Increase font size */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+.modal-link:hover {
+    color: #0056b3; /* Darker blue on hover */
+    text-decoration: none; /* Remove underline on hover */
+}
