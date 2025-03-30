@@ -81,7 +81,7 @@ main {
 }
 
 .advertisement {
-    width: 25%; /* Advertisement takes 25% of the width */
+    width: 24%; /* Advertisement takes 25% of the width */
     background-color: #f1f1f1;
     padding: 15px;
     border-radius: 8px;
@@ -116,7 +116,7 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: flex-start; /* Align content to the top */
-    max-height: 600px; /* Set a fixed height for the job list container */
+    max-height: 535px; /* Set a fixed height for the job list container */
     overflow-y: auto; /* Add vertical scroll bar if content overflows */
 }
 
