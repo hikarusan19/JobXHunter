@@ -1,0 +1,154 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #d2b48c; /* Tan background color */
+}
+
+/* Header Styles */
+header {
+    background-color: #2e8b57; /* Forest green */
+    color: #fff; /* White text */
+    padding: 10px 0;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2e8b57; /* Forest green */
+    padding: 10px 20px;
+    color: white;
+}
+
+.logo-title {
+    display: flex;
+    align-items: center; /* Align logo and text vertically */
+    gap: 10px; /* Add space between the logo and the text */
+}
+
+.logo img {
+    max-height: 50px;
+    width: 60px; /* Ensure the width matches the height for a perfect circle */
+    border-radius: 10%; /* Keep the logo circular */
+    object-fit: cover; /* Ensure the image fits within the circle */
+}
+
+.header-title {
+    flex: 1;
+    text-align: center;
+}
+
+.header-title h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    color: #333;
+}
+
+.nav-links ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.nav-links ul li {
+    margin-left: 15px;
+}
+
+.nav-links ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.nav-links ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Notification Styles */
+.notification-container {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin: 10px 20px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.company-name {
+    font-weight: bold;
+    color: #337ab7;
+}
+
+.short-info {
+    margin-top: 5px;
+    font-size: 0.9em;
+    color: #555;
+}
+
+.apply-button {
+    display: inline-block;
+    padding: 8px 15px;
+    margin-top: 10px;
+    background-color: #5cb85c;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.9em;
+}
+
+.apply-button:hover {
+    background-color: #4cae4c;
+}
+
+/* Back Button */
+.top-right {
+    text-align: right;
+    margin: 10px 20px;
+}
+
+.top-right .btn {
+    padding: 8px 15px;
+    background-color: #5cb85c;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.top-right .btn:hover {
+    background-color: #4cae4c;
+}
+#notification-icon:hover ion-icon {
+    color: #1e7e34; /* Change to blue on hover */
+    cursor: pointer;
+}
+#notification-icon{
+    font-size: 2rem;
+    vertical-align: middle;
+    color: #000000;
+
+}
+#user-profile {
+    color: #000000; /* Matches the header text color */
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+/* Footer Styles */
+.footer-container {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #2e8b57; /* Forest green */
+    color: white;
+}
