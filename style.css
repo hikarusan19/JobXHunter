@@ -371,3 +371,8 @@ footer {
     color: #0056b3; /* Darker blue on hover */
     text-decoration: none; /* Remove underline on hover */
 }
+button[data-bs-dismiss="modal"] {
+    padding: 5px 10px; /* Adjust padding for a smaller size */
+    font-size: 1em; /* Slightly smaller font size */
+    width: 100px; /* Set a fixed width */
+}
