@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style1.css?v=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -85,7 +85,9 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="signUpModalLabel">Sign Up</h5>
-                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal" aria-label="Close">
+                        Back
+                    </button>
                 </div>
                 <div class="modal-body">
                     <form>
@@ -123,6 +125,8 @@
                         <a href="#" class="modal-link" data-bs-toggle="modal" data-bs-target="#signInModal">Sign In</a>
                     </div>
                 </div>
+ 
+                </div>
             </div>
         </div>
     </div>
@@ -133,10 +137,12 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="signInModalLabel">Sign In</h5>
-                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal" aria-label="Close">
+                        Back
+                    </button>
                 </div>
                 <div class="modal-body">
-                    <form>
+                    <form id="login-form">
                         <div class="mb-3">
                             <label for="username" class="form-label">Username:</label>
                             <input type="text" class="form-control" id="username" name="username" required>
@@ -166,6 +172,27 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script>
+        document.getElementById('login-form').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            // Perform validation or authentication logic here (optional)
+
+            // Redirect to employee.html
+            window.location.href = 'subscript.html';
+        });
+
+        document.querySelector('#signUpModal form').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            // Display a success message
+            alert('Sign-up complete!');
+
+            // Optionally, close the modal after sign-up
+            const signUpModal = bootstrap.Modal.getInstance(document.getElementById('signUpModal'));
+            signUpModal.hide();
+        });
+    </script>
 
 </body>
 </html>
