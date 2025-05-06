@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <title>Job Hiring Notification</title>
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo-title">
+                <div class="logo">
+                    <img src="logo/logoJxh.png" alt="Job x Hunter Logo">
+                </div>
+                <div class="header-title">
+                    <h1>Job x Hunter</h1>
+                </div>
+            </div>
+            <nav class="nav-links">
+                <ul class="d-flex align-items-center">
+                    <!-- User Icon -->
+                    <li class="me-3">
+                        <a href="#" id="user-profile" data-bs-toggle="modal" data-bs-target="#userInfoModal">
+                            <ion-icon name="person-circle-outline" style="font-size: 2.5rem; vertical-align: middle; color: black;"></ion-icon>
+                            Emmar John
+                        </a>
+                    </li>
+                    <!-- Notification Icon -->
+                    <li>
+                        <a href="#" id="notification-icon">
+                            <ion-icon name="notifications-outline" ></ion-icon>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="modal fade" id="userInfoModal" tabindex="-1" aria-labelledby="userInfoModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="userInfoModalLabel">Personal Information</h5>
+                    <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal" aria-label="Close">
+                        Back
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="user-info-form">
+                        <div class="mb-3">
+                            <label for="full-name" class="form-label">Full Name:</label>
+                            <input type="text" class="form-control" id="full-name" name="full-name" value="Emmar John Cañas" readonly>
+                        </div>
+                        <div class="mb-3">
+                            <label for="phone-number" class="form-label">Phone Number:</label>
+                            <input type="text" class="form-control" id="phone-number" name="phone-number" value="123-456-7890" readonly>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email-address" class="form-label">Email Address:</label>
+                            <input type="email" class="form-control" id="email-address" name="email-address" value="emmarjohcanas1@gmail.com" readonly>
+                        </div>
+                        <div class="mb-3">
+                            <label for="current-address" class="form-label">Current Address:</label>
+                            <input type="text" class="form-control" id="current-address" name="current-address" value="123 Main St, City, Country" readonly>
+                        </div>
+                        <div class="mb-3">
+                            <label for="linkedin-profile" class="form-label">LinkedIn Profile URL:</label>
+                            <input type="url" class="form-control" id="linkedin-profile" name="linkedin-profile" value="https://www.linkedin.com/in/emmar-john-ca%C3%B1as-38409a355/" readonly>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <button type="button" class="btn btn-outline-primary btn-sm" id="add-resume-button" data-bs-toggle="modal" data-bs-target="#addResumeModal">Resume</button>
+                            <button type="button" class="btn btn-outline-success btn-sm" id="edit-info-button">Edit Information</button>
+                        </div>
+                        <div class="mt-3 text-center">
+                            <button type="button" class="btn btn-danger btn-sm" id="sign-out-button">Sign Out</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Resume Modal -->
+    <div class="modal fade" id="addResumeModal" tabindex="-1" aria-labelledby="addResumeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addResumeModalLabel">Add Resume</h5>
+                    <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal" aria-label="Close">Back</button>
+                </div>
+                <div class="modal-body">
+                    <form id="resume-form">
+                        <div class="mb-3">
+                            <label for="profile-picture" class="form-label">2x2 Picture:</label>
+                            <input type="file" class="form-control" id="profile-picture" name="profile-picture" accept="image/*" required>
+                            <small class="form-text text-muted">Note: Please upload a 2x2 picture with proper attire.</small>
+                        </div>
+                        <div class="mb-3">
+                            <label for="full-name" class="form-label">Your Full Name:</label>
+                            <input type="text" class="form-control" id="full-name" name="full-name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="phone-number" class="form-label">Your Phone Number:</label>
+                            <input type="text" class="form-control" id="phone-number" name="phone-number" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email-address" class="form-label">Email Address:</label>
+                            <input type="email" class="form-control" id="email-address" name="email-address" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="linkedin-profile" class="form-label">LinkedIn Profile URL:</label>
+                            <input type="url" class="form-control" id="linkedin-profile" name="linkedin-profile">
+                        </div>
+                        <div class="mb-3">
+                            <label for="city" class="form-label">Your City:</label>
+                            <input type="text" class="form-control" id="city" name="city" value="Metro Manila" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="summary" class="form-label">Summary/Objective:</label>
+                            <textarea class="form-control" id="summary" name="summary" rows="3" placeholder="A brief (2-4 sentence) overview of your key skills, experience, and career goals."></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Work Experience:</label>
+                            <textarea class="form-control" rows="5" placeholder="Job Title, Company Name, City, Metro Manila, Start Date – End Date&#10;    Key responsibility or achievement using action verbs.&#10;    Another key responsibility or achievement with quantifiable results if possible."></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Education:</label>
+                            <textarea class="form-control" rows="4" placeholder="Degree Name, Major, University Name, City, Metro Manila, Graduation Date&#10;Relevant coursework, honors, or GPA if strong."></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="skills" class="form-label">Skills:</label>
+                            <textarea class="form-control" id="skills" name="skills" rows="3" placeholder="List your skills here."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Save Resume</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Back Button at the Top-Right -->
+    <div class="top-right">
+        <a href="employee.html" class="btn btn-secondary">Back</a>
+    </div>
+
+    <!-- Notifications -->
+    <main>
+        <div class="notification-container">
+            <p><span class="company-name">[Tech Solutions PH]</span> is Hiring a Junior Web Developer:</p>
+            <p class="short-info">Join our dynamic team building innovative web applications. Apply now!</p>
+            <a href="#" class="apply-button" data-bs-toggle="modal" data-bs-target="#jobDetailsModal">Apply Now</a>
+        </div>
+
+        <div class="notification-container">
+            <p><span class="company-name">[Global Retail Corp]</span> Seeks Customer Service Representatives:</p>
+            <p class="short-info">Excellent communication skills required to support our growing customer base.</p>
+            <a href="#" class="apply-button">Apply Now</a>
+        </div>
+
+        <div class="notification-container">
+            <p><span class="company-name">[Food Manufacturing Inc.]</span> Urgently Needs Production Staff:</p>
+            <p class="short-info">Multiple full-time positions available in our Caloocan plant.</p>
+            <a href="#" class="apply-button">Apply Now</a>
+        </div>
+
+        <div class="notification-container">
+            <p><span class="company-name">[BPO Services Manila]</span> Hiring Experienced Call Center Agents:</p>
+            <p class="short-info">Competitive salary and benefits offered. Apply if you have prior experience.</p>
+            <a href="#" class="apply-button">Apply Now</a>
+        </div>
+
+        <div class="notification-container">
+            <p><span class="company-name">[Marketing Innovations Agency]</span> Looking for a Social Media Specialist:</p>
+            <p class="short-info">Creative individual needed to manage and grow our clients' online presence.</p>
+            <a href="#" class="apply-button">Apply Now</a>
+        </div>
+
+       
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2025 Job x Hunter. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Add this modal after the footer -->
+    <div class="modal fade" id="jobDetailsModal" tabindex="-1" aria-labelledby="jobDetailsModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h5 class="modal-title" id="jobDetailsModalLabel">Job Details: Junior Web Developer</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <!-- Modal Body -->
+                <div class="modal-body">
+                    <h6><strong>Job Summary:</strong></h6>
+                    <p>A Junior Web Developer helps create and maintain websites and web applications. They work closely with senior developers and designers to support website development, fix bugs, and improve user experience. This is a great entry-level position for fresh graduates or those with basic coding experience.</p>
+
+                    <h6><strong>Job Responsibilities:</strong></h6>
+                    <ul>
+                        <li>Write and update code using HTML, CSS, JavaScript, and PHP</li>
+                        <li>Assist in developing user-friendly, mobile-responsive websites</li>
+                        <li>Help connect websites to databases and APIs</li>
+                        <li>Test website features and fix errors or bugs</li>
+                        <li>Work with designers and senior developers to build new features</li>
+                        <li>Maintain and update existing websites as needed</li>
+                        <li>Use tools like GitHub for version control and collaboration</li>
+                    </ul>
+
+                    <h6><strong>Qualifications:</strong></h6>
+                    <p><strong>Educational Background:</strong></p>
+                    <ul>
+                        <li>Graduate of BS in Information Technology, Computer Science, or related course</li>
+                        <li>(Optional) College undergraduates or vocational graduates with strong skills can also apply</li>
+                    </ul>
+                    <p><strong>Technical Skills:</strong></p>
+                    <ul>
+                        <li>Basic knowledge of HTML, CSS, JavaScript</li>
+                        <li>Experience or familiarity with PHP (core and/or with a framework like Laravel)</li>
+                        <li>Understanding of how to use MySQL or other databases</li>
+                        <li>Can use Git/GitHub for version control</li>
+                        <li>Bonus: Knowledge of WordPress, Bootstrap, or basic back-end development</li>
+                    </ul>
+                    <p><strong>Soft Skills:</strong></p>
+                    <ul>
+                        <li>Willing to learn and grow</li>
+                        <li>Can follow instructions and meet deadlines</li>
+                        <li>Good communication and teamwork skills</li>
+                        <li>Attention to detail and problem-solving mindset</li>
+                    </ul>
+                    <p><strong>Preferred (But Not Required):</strong></p>
+                    <ul>
+                        <li>Internship or freelance experience in web development</li>
+                        <li>A simple portfolio or GitHub account with sample projects</li>
+                        <li>Experience using website builders or CMS platforms like WordPress</li>
+                    </ul>
+
+                    <h6><strong>Expected Salary Range (Philippines):</strong></h6>
+                    <ul>
+                        <li>Entry Level: ₱15,000 – ₱25,000 per month</li>
+                        <li>With 1–2 years of experience: ₱25,000 – ₱35,000 per month</li>
+                        <li>Freelance/Project-Based: ₱5,000 – ₱15,000 per project (depends on complexity)</li>
+                    </ul>
+                </div>
+                <!-- Modal Footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" id="submit-resume-button">Submit Resume</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Message Modal -->
+    <div class="modal fade" id="successMessageModal" tabindex="-1" aria-labelledby="successMessageModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="successMessageModalLabel">Thank You for Applying</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p><strong>Subject:</strong> Thank You for Applying – Junior Web Developer</p>
+                    <p>Hi Emmar John,</p>
+                    <p>Thank you for applying for the Junior Web Developer position at Tech Solutions PH.</p>
+                    <p>We’ve received your resume and will review it shortly. If your qualifications match what we're looking for, we’ll contact you for the next steps.</p>
+                    <p>Best regards,</p>
+                    <p><strong>Tech Solutions PH Recruitment Team</strong></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script>
+        document.getElementById('submit-resume-button').addEventListener('click', function () {
+            // Show the success message modal
+            const successModal = new bootstrap.Modal(document.getElementById('successMessageModal'));
+            successModal.show();
+        });
+    </script>
+</body>
+</html>
