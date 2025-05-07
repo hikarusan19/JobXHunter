@@ -150,8 +150,11 @@ footer {
 .top-right .btn:hover {
     background-color: #48638C;
 }
+#submit-resume-button{
+    background-color: #48638C
+}
 #notification-icon:hover ion-icon {
-    color: #48638C; /* Change to blue on hover */
+    color: #224570; /* Change to blue on hover */
     cursor: pointer;
 }
 #notification-icon{
@@ -164,5 +167,14 @@ footer {
     color: #ffffff; /* Matches the header text color */
     font-size: 1rem;
     font-weight: bold;
+}
+
+/* Scrollable Job Details in Modal */
+.modal-body {
+    max-height: 550px; /* Set a fixed height for the modal body */
+    overflow-y: auto; /* Enable vertical scrolling if content overflows */
+    padding: 15px; /* Add padding for better readability */
+    background-color: #f9f9f9; /* Light background for better contrast */
+    border-radius: 5px; /* Optional: Add rounded corners */
 }
 
