@@ -500,3 +500,12 @@ button, .btn {
 button:hover, .btn:hover {
     background-color: #48638C; /* Darker green on hover */
 }
+
+/* Scrollable Job Details in Modal */
+.modal-body {
+    max-height: 650px; /* Set a fixed height for the modal body */
+    overflow-y: auto; /* Enable vertical scrolling if content overflows */
+    padding: 15px; /* Add padding for better readability */
+    background-color: #f9f9f9; /* Light background for better contrast */
+    border-radius: 5px; /* Optional: Add rounded corners */
+}
