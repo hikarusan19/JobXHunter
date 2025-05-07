@@ -5,14 +5,15 @@ html, body {
     flex-direction: column;
 }
 
+
 body {
-    background-color: #f4f4f4; /* Light neutral background */
+    background-color: #F4F4F4; /* Light neutral background */
     font-family: 'Roboto', sans-serif;
     color: #2c3e50; /* Dark gray for text */
 }
 
 header {
-    background-color: #2e8b57; /* Forest green */
+    background-color: #224570; /* Forest green */
     color: #fff; /* White text */
     padding: 20px 0;
 }
@@ -28,6 +29,8 @@ header {
     display: flex;
     align-items: center; /* Align logo and text vertically */
     gap: 10px; /* Add space between the logo and the text */
+    font-family:sans-serif;
+
 }
 
 .logo img {
@@ -40,6 +43,7 @@ header {
 .header-title {
     flex: 1;
     text-align: center;
+    
 }
 
 .header-title h1 {
@@ -47,7 +51,7 @@ header {
     margin: 0;
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
-    color: #333;
+    color: #ffffff;
 }
 
 .nav-links ul {
@@ -88,8 +92,8 @@ main {
 }
 
 .advertisement {
-    background-color: #8b4513; /* Saddle brown */
-    color: #fff;
+    background-color: #f4f4f4; /* Saddle brown */
+    color: #000000;
     padding: 20px;
     border-radius: 10px;
     text-align: center;
@@ -100,11 +104,13 @@ main {
     flex-direction: column;
     justify-content: center; /* Center content vertically */
     align-items: center; /* Center content horizontally */
+  
 }
 
 .advertisement h3 {
     margin-bottom: 10px;
     font-size: 1.5em;
+    color: #000000;
 }
 
 .advertisement .ad-image {
@@ -114,7 +120,7 @@ main {
 }
 
 .job-list-container {
-    background-color: #f5deb3; /* Wheat color */
+    background-color: #f4f4f4; /* Wheat color */
     padding: 20px;
     border-radius: 10px;
     width: 25%; /* Job list takes 25% of the width */
@@ -128,7 +134,7 @@ main {
 }
 
 .job-list-container h3 {
-    color: #2e8b57;
+    color: #000000;
     font-size: 1.5em;
     margin-bottom: 15px;
     text-align: center;
@@ -143,7 +149,7 @@ main {
 .job-list li {
     margin: 5px 0;
     font-size: 1em;
-    color: #555;
+    color: #000000;
     padding: 10px 0;
     border-bottom: 1px solid #ddd;
 }
@@ -153,7 +159,7 @@ main {
 }
 
 .job-list li a {
-    color: #2e8b57;
+    color: #000000;
     text-decoration: none;
 }
 
@@ -161,18 +167,19 @@ main {
     text-decoration: underline;
 }
 
+
 /* Job Results Container */
 .job-results-container {
-    margin-top: 20px;
-    padding: 10px;
+    margin-top: 10px;
+    padding: 5px;
     background-color: #f9f9f9;
     border-radius: 5px;
-    max-height: 300px; /* Set a fixed height */
+    max-height: 260px; /* Set a fixed height */
     overflow-y: auto; /* Add vertical scroll bar if content overflows */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for better UI */
     display: grid; /* Use grid layout */
     grid-template-columns: repeat(2, 1fr); /* Two columns */
-    gap: 15px; /* Add spacing between items */
+    gap: 10px; /* Add spacing between items */
 }
 
 /* Individual Job Item */
@@ -180,7 +187,7 @@ main {
     border: 1px solid #ccc;
     padding: 15px;
     border-radius: 5px;
-    background-color: #ffffff;
+    background-color: #f4f4f4;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -201,7 +208,7 @@ main {
     display: inline-block;
     padding: 8px 15px;
     margin-top: 10px;
-    background-color: #5cb85c;
+    background-color: #224570;
     color: white;
     text-decoration: none;
     border-radius: 5px;
@@ -211,13 +218,13 @@ main {
 }
 
 .apply-button:hover {
-    background-color: #4cae4c;
+    background-color: #48638C;
 }
 
 .main-container {
     text-align: center;
     padding: 40px 20px;
-    background-color: #d2b48c; /* Tan background */
+    background-color: #f4f4f4; /* Tan background */
     border-radius: 10px;
     margin: 20px auto;
     max-width: 800px;
@@ -229,13 +236,14 @@ main {
 }
 
 .main-container h1 {
-    color: #2e8b57; /* Forest green */
+    color: #224570; /* Forest green */
     font-size: 2.5em;
+    font-weight: bold;
 }
 
 .main-container p {
     font-size: 1.2em;
-    color: #555;
+    color: #224570;
 }
 
 .search-bar {
@@ -249,7 +257,7 @@ main {
 .search-input {
     padding: 10px;
     margin: 5px;
-    border: 1px solid #2e8b57;
+    border: 1px solid #224570;
     border-radius: 5px;
     font-size: 1.2em; /* Increase font size */
     width: 200px; /* Increase width of input fields */
@@ -257,8 +265,8 @@ main {
 
 .search-button {
     padding: 10px 20px;
-    background-color: #2e8b57;
-    color: #fff;
+    background-color: #224570;
+    color: #f4f4f4ff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -266,11 +274,11 @@ main {
 }
 
 .search-button:hover {
-    background-color: #1e6b43; /* Darker green */
+    background-color: #48638C; /* Darker green */
 }
 
 footer {
-    background-color: #2e8b57;
+    background-color: #48638C;
     color: #fff;
     text-align: center;
     padding: 10px 0;
@@ -281,6 +289,7 @@ footer {
 .footer-container p {
     margin: 0;
 }
+
 
 .modal {
     display: none; /* Hidden by default */
@@ -327,16 +336,16 @@ footer {
     display: block;
     width: 100%;
     padding: 10px;
-    background-color: blue;
-    color: white;
+    background-color: #224570;
+    color: rgb(255, 255, 255);
     border: none;
-    border-radius: 5px;
+    border-radius: 20px;
     cursor: pointer;
     font-size: 1em;
 }
 
 .modal-content button:hover {
-    background-color: darkblue;
+    background-color: #48638C;
 }
 
 .close-button {
@@ -381,7 +390,7 @@ footer {
 
 /* Custom close button */
 .custom-close-btn {
-    background-color: #ff4d4d; /* Red background */
+    background-color: #48638C; /* Red background */
     color: white; /* White text */
     border: none; /* Remove default border */
     border-radius: 5px; /* Slightly rounded corners */
@@ -391,14 +400,14 @@ footer {
 }
 
 .custom-close-btn:hover {
-    background-color: #e60000; /* Darker red on hover */
+    background-color: #48638C; /* Darker red on hover */
 }
 
 /* Style the Close button with just a line */
 .btn-close-line {
     background: none; /* Remove background */
     border: none; /* Remove border */
-    color: #007bff; /* Bootstrap primary blue color */
+    color: #224570; /* Bootstrap primary blue color */
     text-decoration: underline; /* Add underline to make it look like a link */
     font-size: 1em; /* Adjust font size */
     margin-top: 10px; /* Add spacing above the button */
@@ -408,42 +417,29 @@ footer {
 }
 
 .btn-close-line:hover {
-    color: #0056b3; /* Darker blue on hover */
+    color: #48638C; /* Darker blue on hover */
     text-decoration: none; /* Remove underline on hover */
 }
 
 /* Style for clickable modal links */
 .modal-link {
-    color: #007bff; /* Bootstrap primary blue color */
+    color: #224570; /* Bootstrap primary blue color */
     text-decoration: underline; /* Underline to indicate a link */
     font-size: 1.2em; /* Increase font size */
     cursor: pointer; /* Pointer cursor on hover */
 }
 
 .modal-link:hover {
-    color: #0056b3; /* Darker blue on hover */
+    color: #48638C; /* Darker blue on hover */
     text-decoration: none; /* Remove underline on hover */
 }
-
-/* User profile link styling */
-#user-profile {
-    color: #000000; /* Matches the header text color */
-    text-decoration: none;
-    font-weight: bold;
-}
-
-#user-profile ion-icon {
-    font-size: 24rem; /* Increase the icon size */
-    vertical-align: middle; /* Align the icon with the text */
-}
-
 #user-profile:hover {
     text-decoration: underline;
 }
 
 /* Custom button styles */
 #add-resume-button {
-    background-color: #28a745; /* Primary blue */
+    background-color: #224570; /* Primary blue */
     width: 200px; /* Set a fixed width */
     height: 50px;
     color: white;
@@ -451,11 +447,11 @@ footer {
 }
 
 #add-resume-button:hover {
-    background-color: #1e7e34; /* Darker blue on hover */
+    background-color: #48638C; /* Darker blue on hover */
 }
 
 #edit-info-button {
-    background-color: #28a745; /* Success green */
+    background-color: #224570; /* Success green */
     width: 200px; /* Set a fixed width */
     height: 50px;
     color: white;
@@ -463,7 +459,7 @@ footer {
 }
 
 #edit-info-button:hover {
-    background-color: #1e7e34; /* Darker green on hover */
+    background-color: #48638C; /* Darker green on hover */
 }
 
 /* Custom styling for the Back button */
@@ -475,17 +471,32 @@ button[data-bs-dismiss="modal"] {
 
 /* Notification icon hover effect */
 #notification-icon:hover ion-icon {
-    color: #1e7e34; /* Change to blue on hover */
+    color: #48638C; /* Change to blue on hover */
     cursor: pointer;
 }
 #notification-icon{
     font-size: 2rem;
     vertical-align: middle;
-    color: #000000;
+    color: #ffffff;
 
 }
 #user-profile {
-    color: #000000; /* Matches the header text color */
+    color: #ffffff; /* Matches the header text color */
     font-size: 1rem; /* Increase the font size */
-    font-weight: bold;
+    font-weight:normal;
+}
+
+button, .btn {
+    background-color: #28a745; /* Green color */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+button:hover, .btn:hover {
+    background-color: #48638C; /* Darker green on hover */
 }
