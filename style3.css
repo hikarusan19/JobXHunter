@@ -113,12 +113,12 @@ header {
 }
 
 /* Back Button */
-.top-right {
+.d-flex {
     text-align: right;
     margin: 10px 20px;
 }
 
-.top-right .btn {
+.d-flex .btn {
     padding: 8px 15px;
     background-color: #5cb85c;
     color: white;
