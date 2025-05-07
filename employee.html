@@ -196,6 +196,73 @@
             </div>
         </div>
     </div>
+    <div class="modal fade" id="jobDetailsModal" tabindex="-1" aria-labelledby="jobDetailsModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h5 class="modal-title" id="jobDetailsModalLabel">Job Details: Junior Web Developer</h5>
+                    <button type="button" data-bs-dismiss="modal" >Close</button>
+                </div>
+                <!-- Modal Body -->
+                <div class="modal-body">
+                    <h6><strong>Job Summary:</strong></h6>
+                    <p>A Junior Web Developer helps create and maintain websites and web applications. They work closely with senior developers and designers to support website development, fix bugs, and improve user experience. This is a great entry-level position for fresh graduates or those with basic coding experience.</p>
+
+                    <h6><strong>Job Responsibilities:</strong></h6>
+                    <ul>
+                        <li>Write and update code using HTML, CSS, JavaScript, and PHP</li>
+                        <li>Assist in developing user-friendly, mobile-responsive websites</li>
+                        <li>Help connect websites to databases and APIs</li>
+                        <li>Test website features and fix errors or bugs</li>
+                        <li>Work with designers and senior developers to build new features</li>
+                        <li>Maintain and update existing websites as needed</li>
+                        <li>Use tools like GitHub for version control and collaboration</li>
+                    </ul>
+
+                    <h6><strong>Qualifications:</strong></h6>
+                    <p><strong>Educational Background:</strong></p>
+                    <ul>
+                        <li>Graduate of BS in Information Technology, Computer Science, or related course</li>
+                        <li>(Optional) College undergraduates or vocational graduates with strong skills can also apply</li>
+                    </ul>
+                    <p><strong>Technical Skills:</strong></p>
+                    <ul>
+                        <li>Basic knowledge of HTML, CSS, JavaScript</li>
+                        <li>Experience or familiarity with PHP (core and/or with a framework like Laravel)</li>
+                        <li>Understanding of how to use MySQL or other databases</li>
+                        <li>Can use Git/GitHub for version control</li>
+                        <li>Bonus: Knowledge of WordPress, Bootstrap, or basic back-end development</li>
+                    </ul>
+                    <p><strong>Soft Skills:</strong></p>
+                    <ul>
+                        <li>Willing to learn and grow</li>
+                        <li>Can follow instructions and meet deadlines</li>
+                        <li>Good communication and teamwork skills</li>
+                        <li>Attention to detail and problem-solving mindset</li>
+                    </ul>
+                    <p><strong>Preferred (But Not Required):</strong></p>
+                    <ul>
+                        <li>Internship or freelance experience in web development</li>
+                        <li>A simple portfolio or GitHub account with sample projects</li>
+                        <li>Experience using website builders or CMS platforms like WordPress</li>
+                    </ul>
+
+                    <h6><strong>Expected Salary Range (Philippines):</strong></h6>
+                    <ul>
+                        <li>Entry Level: ₱15,000 – ₱25,000 per month</li>
+                        <li>With 1–2 years of experience: ₱25,000 – ₱35,000 per month</li>
+                        <li>Freelance/Project-Based: ₱5,000 – ₱15,000 per project (depends on complexity)</li>
+                    </ul>
+                </div>
+                <!-- Modal Footer -->
+                <div class="modal-footer">
+
+                    <button type="button" class="btn btn-primary" id="submit-resume-button">Submit Resume</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <footer>
         <div class="footer-container">
@@ -317,10 +384,37 @@
                 jobElement.innerHTML = `
                     <p class="company-name">${job.split(':')[0]}</p>
                     <p class="job-description">${job.split(':')[1]}</p>
-                    <button class="apply-button">Apply Now</button>
+                    <a href="#" class="apply-button" data-bs-toggle="modal" data-bs-target="#jobDetailsModal" id="apply-tech-solutions">Apply Now</a>
                 `;
                 jobResultsContainer.appendChild(jobElement);
             });
+        });
+    </script>
+    <script>
+        document.getElementById('apply-tech-solutions').addEventListener('click', function () {
+            // Populate the modal with job details for Tech Solutions PH
+            document.getElementById('jobDetailsModalLabel').textContent = "Job Details: Junior Web Developer";
+            document.querySelector('.modal-body').innerHTML = `
+                <h6><strong>Job Summary:</strong></h6>
+                <p>A Junior Web Developer helps create and maintain websites and web applications. They work closely with senior developers and designers to support website development, fix bugs, and improve user experience. This is a great entry-level position for fresh graduates or those with basic coding experience.</p>
+
+                <h6><strong>Job Responsibilities:</strong></h6>
+                <ul>
+                    <li>Write and update code using HTML, CSS, JavaScript, and PHP</li>
+                    <li>Assist in developing user-friendly, mobile-responsive websites</li>
+                    <li>Help connect websites to databases and APIs</li>
+                    <li>Test website features and fix errors or bugs</li>
+                    <li>Work with designers and senior developers to build new features</li>
+                    <li>Maintain and update existing websites as needed</li>
+                    <li>Use tools like GitHub for version control and collaboration</li>
+                </ul>
+
+                <h6><strong>Qualifications:</strong></h6>
+                <ul>
+                    <li>Graduate of BS in Information Technology, Computer Science, or related course</li>
+                    <li>(Optional) College undergraduates or vocational graduates with strong skills can also apply</li>
+                </ul>
+            `;
         });
     </script>
 
