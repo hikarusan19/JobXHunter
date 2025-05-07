@@ -5,34 +5,32 @@ html, body {
     flex-direction: column;
 }
 
-/* General Styles */
+
 body {
+    background-color: #F4F4F4; /* Light neutral background */
     font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #d2b48c; /* Tan background color */
+    color: #2c3e50; /* Dark gray for text */
 }
 
-/* Header Styles */
 header {
-    background-color: #2e8b57; /* Forest green */
+    background-color: #224570; /* Forest green */
     color: #fff; /* White text */
-    padding: 10px 0;
+    padding: 20px 0;
 }
 
 .header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #2e8b57; /* Forest green */
-    padding: 10px 20px;
-    color: white;
+    padding: 0 20px;
 }
 
 .logo-title {
     display: flex;
     align-items: center; /* Align logo and text vertically */
     gap: 10px; /* Add space between the logo and the text */
+    font-family:sans-serif;
+
 }
 
 .logo img {
@@ -45,14 +43,22 @@ header {
 .header-title {
     flex: 1;
     text-align: center;
+    
+}
+h2 {
+    font-size: 2rem;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    color: #000000;
 }
 
 .header-title h1 {
-    margin: 0;
     font-size: 1.8rem;
+    margin: 0;
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
-    color: #333;
+    color: #ffffff;
 }
 
 .nav-links ul {
@@ -60,7 +66,6 @@ header {
     margin: 0;
     padding: 0;
     display: flex;
-    align-items: center;
 }
 
 .nav-links ul li {
@@ -68,18 +73,34 @@ header {
 }
 
 .nav-links ul li a {
-    color: white;
+    color: #fff;
     text-decoration: none;
-    font-size: 1.2rem;
+    font-weight: bold;
 }
 
 .nav-links ul li a:hover {
     text-decoration: underline;
 }
 
+.nav-links {
+    margin-left: auto;
+}
+footer {
+    background-color: #48638C;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.footer-container p {
+    margin: 0;
+}
+
 /* Notification Styles */
 .notification-container {
-    border: 1px solid #ccc;
+    border: 1px solid #ccc; /* Light gray border */
     padding: 15px;
     margin: 10px 20px;
     border-radius: 5px;
@@ -101,7 +122,7 @@ header {
     display: inline-block;
     padding: 8px 15px;
     margin-top: 10px;
-    background-color: #5cb85c;
+    background-color: #224570;
     color: white;
     text-decoration: none;
     border-radius: 5px;
@@ -109,7 +130,7 @@ header {
 }
 
 .apply-button:hover {
-    background-color: #4cae4c;
+    background-color: #48638C;
 }
 
 /* Back Button */
@@ -120,35 +141,28 @@ header {
 
 .d-flex .btn {
     padding: 8px 15px;
-    background-color: #5cb85c;
+    background-color: #224570;
     color: white;
     text-decoration: none;
     border-radius: 5px;
 }
 
 .top-right .btn:hover {
-    background-color: #4cae4c;
+    background-color: #48638C;
 }
 #notification-icon:hover ion-icon {
-    color: #1e7e34; /* Change to blue on hover */
+    color: #48638C; /* Change to blue on hover */
     cursor: pointer;
 }
 #notification-icon{
     font-size: 2rem;
     vertical-align: middle;
-    color: #000000;
+    color: #ffffff;
 
 }
 #user-profile {
-    color: #000000; /* Matches the header text color */
+    color: #ffffff; /* Matches the header text color */
     font-size: 1rem;
     font-weight: bold;
 }
 
-/* Footer Styles */
-.footer-container {
-    text-align: center;
-    padding: 10px 0;
-    background-color: #2e8b57; /* Forest green */
-    color: white;
-}
